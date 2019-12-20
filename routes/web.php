@@ -25,3 +25,19 @@ Route::get('/admin/example', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+//PRODUCT
+
+Route::prefix('admin')->group(function () {
+    Route::get('product/index', 'ProductController@index')
+    ->name('product.index');
+
+Route::get('product/create', 'ProductController@create')
+    ->name('product.create');
+
+});
+
+
+
+
